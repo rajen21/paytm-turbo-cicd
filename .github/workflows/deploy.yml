@@ -37,6 +37,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull rajanchavda/mynextapp:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 rajanchavda/mynextapp:latest
+          sudo docker stop mynextapp || true
+          sudo docker rm mynextapp || true
+          sudo docker run -d --name mynextapp -p 3005:3000 rajanchavda/mynextapp:latest
